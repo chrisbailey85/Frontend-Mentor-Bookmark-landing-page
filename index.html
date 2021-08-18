@@ -10,26 +10,38 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <!-- font-family: 'Rubik', sans-serif; -->
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="main.css" />
     <title>Frontend Mentor | Bookmark landing page</title>
   </head>
   <body>
     <header class="header">
-      <img src="./images/logo-bookmark.svg" alt="" />
-      <button class="hambuger" aria-expanded="false">
+      <img src="./images/logo-bookmark.svg" alt="" class="logo" />
+      <button
+        class="hambuger"
+        aria-expanded="false"
+        aria-label="Menu"
+        aria-controls="navigation"
+      >
         <span class="line line--one"></span>
         <span class="line line--two"></span>
         <span class="line line--three"></span>
       </button>
 
-      <nav class="nav">
+      <nav class="nav" id="navigation">
         <ul class="nav__list">
           <li class="nav__item">
             <a href="#" class="nav__link">Features</a>
@@ -41,25 +53,25 @@
             <a href="#" class="nav__link">Contact</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">Login</a>
+            <a href="#" class="nav__link login">Login</a>
           </li>
         </ul>
 
         <div class="social">
           <a href="#" class="social__link">
-          <i class="fab fa-facebook-square social__icon"></i>
-          <span class="hidden">facebook</span>
-        </a>
-        <a href="#" class="social__link">
-          <i class="fab fa-twitter social__icon"></i>
-          <span class="hidden">twitter</span>
-        </a>
+            <i class="fab fa-facebook-square social__icon"></i>
+            <span class="hidden">facebook</span>
+          </a>
+          <a href="#" class="social__link">
+            <i class="fab fa-twitter social__icon"></i>
+            <span class="hidden">twitter</span>
+          </a>
         </div>
       </nav>
     </header>
     <main class="main">
       <section class="banner">
-        <img src="./images/illustration-hero.svg" alt="" />
+        <img src="./images/illustration-hero.svg" alt="" class="banner__img" />
 
         <div class="banner__content">
           <div class="banner__text">
@@ -111,7 +123,7 @@
           </div>
           <div class="feature__card">
             <img
-              src="./images/illustration-features-tab-1.svg"
+              src="./images/illustration-features-tab-2.svg"
               alt=""
               class="feature__img"
             />
@@ -124,7 +136,7 @@
           </div>
           <div class="feature__card">
             <img
-              src="./images/illustration-features-tab-1.svg"
+              src="./images/illustration-features-tab-3.svg"
               alt=""
               class="feature__img"
             />
@@ -152,14 +164,20 @@
             <img src="./images/logo-chrome.svg" alt="" class="extension__img" />
             <div class="extension__card__text">
               <h3 class="heading extension--card--heading">Add to Chrome</h3>
-              <p class="paragraph extension--card--paragraph">Minimum version 62</p>
+              <p class="paragraph extension--card--paragraph">
+                Minimum version 62
+              </p>
             </div>
             <div class="extension__cta">
               <button class="extension__btn">Add & Install Extension</button>
             </div>
           </div>
           <div class="extension__card">
-            <img src="./images/logo-chrome.svg" alt="" class="extension__img" />
+            <img
+              src="./images/logo-firefox.svg"
+              alt=""
+              class="extension__img"
+            />
             <div class="extension__card__text">
               <h3 class="heading extension--card--heading">Add to Firefox A</h3>
               <p class="paragraph extension--card--paragraph">
@@ -171,10 +189,12 @@
             </div>
           </div>
           <div class="extension__card">
-            <img src="./images/logo-chrome.svg" alt="" class="extension__img" />
+            <img src="./images/logo-opera.svg" alt="" class="extension__img" />
             <div class="extension__card__text">
-              <h3 class="heading extension--card--heading"> Add to Opera</h3>
-              <p class="paragraph extension--card--paragraph">Minimum version 46</p>
+              <h3 class="heading extension--card--heading">Add to Opera</h3>
+              <p class="paragraph extension--card--paragraph">
+                Minimum version 46
+              </p>
             </div>
             <div class="extension__cta">
               <button class="extension__btn">Add & Install Extension</button>
@@ -187,34 +207,59 @@
         <div class="faq__header">
           <h2 class="heading faq--heading">Frequently Asked Questions</h2>
           <p class="paragraph faq--paragraph">
-            Here are some of our FAQs. If you have any other questions you’d like 
-            answered please feel free to email us
+            Here are some of our FAQs. If you have any other questions you’d
+            like answered please feel free to email us
           </p>
         </div>
 
         <ul class="faq__list">
           <li class="faq__question">
-            What is Bookmark? <button class="faq__btn" aria-expanded="false"><img src="./images/icon-arrow.svg" alt=""></button>
-            <span class="faq__answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
-              justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis</span>
+            What is Bookmark?
+            <button class="faq__btn" aria-expanded="false">
+              <img src="./images/icon-arrow.svg" alt="" />
+            </button>
+            <span class="faq__answer"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+              tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum
+              quis quam ornare mattis</span
+            >
           </li>
           <li class="faq__question">
-            How can I request a new browser? <button class="faq__btn" aria-expanded="false"><img src="./images/icon-arrow.svg" alt=""></button>
-            <span class="faq__answer">Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
-              Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
-              ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
-              Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</span>
+            How can I request a new browser?
+            <button class="faq__btn" aria-expanded="false">
+              <img src="./images/icon-arrow.svg" alt="" />
+            </button>
+            <span class="faq__answer"
+              >Vivamus luctus eros aliquet convallis ultricies. Mauris augue
+              massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus
+              eros aliquet convallis ultricies. Mauris augue massa, ultricies
+              non ligula. Suspendisse imperdie tVivamus luctus eros aliquet
+              convallis ultricies. Mauris augue massa, ultricies non ligula.
+              Suspendisse imperdiet.</span
+            >
           </li>
           <li class="faq__question">
-            Is there a mobile app? <button class="faq__btn" aria-expanded="false"><img src="./images/icon-arrow.svg" alt=""></button>
-            <span class="faq__answer">Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
-              urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
-              sollicitudin ex et ultricies bibendum</span>
+            Is there a mobile app?
+            <button class="faq__btn" aria-expanded="false">
+              <img src="./images/icon-arrow.svg" alt="" />
+            </button>
+            <span class="faq__answer"
+              >Sed consectetur quam id neque fermentum accumsan. Praesent luctus
+              vestibulum dolor, ut condimentum urna vulputate eget. Cras in
+              ligula quis est pharetra mattis sit amet pharetra purus. Sed
+              sollicitudin ex et ultricies bibendum</span
+            >
           </li>
           <li class="faq__question">
-            What about other Chromium browsers?  <button class="faq__btn" aria-expanded="false"><img src="./images/icon-arrow.svg" alt=""></button>
-            <span class="faq__answer">Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
-              vitae neque eget nisl gravida pellentesque non ut velit.</span>
+            What about other Chromium browsers?
+            <button class="faq__btn" aria-expanded="false">
+              <img src="./images/icon-arrow.svg" alt="" />
+            </button>
+            <span class="faq__answer"
+              >Integer condimentum ipsum id imperdiet finibus. Vivamus in
+              placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida
+              pellentesque non ut velit.</span
+            >
           </li>
         </ul>
 
@@ -226,7 +271,11 @@
 
         <form action="#">
           <label for="email">email</label>
-          <input type="email" id="email" placeholder="Enter your email address">
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email address"
+          />
           <button type="submit">Contact Us</button>
         </form>
       </section>
@@ -238,24 +287,30 @@
 
     <footer>
       <div class="footer__logo">
-        <img src="./images/logo-bookmark.svg" alt="">
+        <img src="./images/logo-bookmark.svg" alt="" />
       </div>
       <nav class="footer__nav">
         <ul class="footer__list">
-          <li class="footer__item"><a href="#" class="footer__link">Features</a></li>
-          <li class="footer__item"><a href="#" class="footer__link">Pricing</a></li>
-          <li class="footer__item"><a href="#" class="footer__link">Contact</a></li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Features</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Pricing</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Contact</a>
+          </li>
         </ul>
       </nav>
       <div class="footer__social">
         <a href="#" class="social__link">
-        <i class="fab fa-facebook-square social__icon"></i>
-        <span class="hidden">facebook</span>
-      </a>
-      <a href="#" class="social__link">
-        <i class="fab fa-twitter social__icon"></i>
-        <span class="hidden">twitter</span>
-      </a>
+          <i class="fab fa-facebook-square social__icon"></i>
+          <span class="hidden">facebook</span>
+        </a>
+        <a href="#" class="social__link">
+          <i class="fab fa-twitter social__icon"></i>
+          <span class="hidden">twitter</span>
+        </a>
       </div>
       <p class="attribution">
         Challenge by
