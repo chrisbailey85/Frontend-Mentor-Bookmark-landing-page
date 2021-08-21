@@ -82,70 +82,72 @@
               for free.
             </p>
           </div>
-          <div class="banner__cta">
-            <button class="cta">Get it on Chrome</button>
-            <button class="cta">Get it on Firefox</button>
+          <div class="banner__links">
+            <a href="#" class="banner__link chrome">Get it on Chrome</a>
+            <a href="#" class="banner__link firefox">Get it on Firefox</a>
           </div>
         </div>
       </section>
       <section class="features">
         <div class="features__text">
           <h2 class="heading features--heading">Features</h2>
-          <p class="paragraph deatures--paragraph">
+          <p class="paragraph features--paragraph">
             Our aim is to make it quick and easy for you to access your
             favourite websites. Your bookmarks sync between your devices so you
             can access them on the go.
           </p>
         </div>
 
-        <div class="feature__buttons">
-          <button class="feature__btn">Simple Bookmarking</button>
-          <button class="feature__btn">Speedy Searching</button>
-          <button class="feature__btn">Easy Sharing</button>
+        <div class="features__buttons">
+          <ul class="features__list">
+            <li class="features__item"><button class="features__btn">Simple Bookmarking</button></li>
+            <li class="features__item"> <button class="features__btn">Speedy Searching</button></li>
+            <li class="features__item"><button class="features__btn">Easy Sharing</button></li>
+          </ul>
         </div>
 
-        <div class="feature__cards">
-          <div class="feature__card">
+        <div class="features__cards">
+          <div class="features__card">
             <img
               src="./images/illustration-features-tab-1.svg"
               alt=""
-              class="feature__img"
+              class="features__img"
             />
-            <h3 class="heading feature--card--heading">
+            <h3 class="heading features--card--heading">
               Bookmark in one click
             </h3>
-            <p class="paragraph feature--card--paragraph">
+            <p class="paragraph features--card--paragraph">
               Organize your bookmarks however you like. Our simple drag-and-drop
               interface gives you complete control over how you manage your
               favourite sites.
             </p>
-            <button class="feature__card__btn">More Info</button>
+            <button class="features__card__btn">More Info</button>
           </div>
-          <div class="feature__card">
+          <div class="features__card hidden">
             <img
               src="./images/illustration-features-tab-2.svg"
               alt=""
-              class="feature__img"
+              class="features__img"
             />
-            <h3 class="heading feature--card--heading">Intelligent search</h3>
-            <p class="paragraph feature--card--paragraph">
+            <h3 class="heading features--card--heading">Intelligent search</h3>
+            <p class="paragraph features--card--paragraph">
               Our powerful search feature will help you find saved sites in no
               time at all. No need to trawl through all of your bookmarks.
             </p>
-            <button class="feature__card__btn">More Info</button>
+            <button class="features__card__btn">More Info</button>
           </div>
-          <div class="feature__card">
+          <div class="features__card hidden">
             <img
               src="./images/illustration-features-tab-3.svg"
               alt=""
-              class="feature__img"
+              class="features__img"
             />
-            <h3 class="heading feature--card--heading">Share your bookmarks</h3>
-            <p class="paragraph feature--card--paragraph">
+            <h3 class="heading features--card--heading">Share your bookmarks</h3>
+            <p class="paragraph features--card--paragraph">
               Easily share your bookmarks and collections with others. Create a
               shareable link that you can send at the click of a button.
             </p>
-            <button class="feature__card__btn">More Info</button>
+            <button class="features__card__btn">More Info</button>
           </div>
         </div>
       </section>
@@ -185,7 +187,7 @@
               </p>
             </div>
             <div class="extension__cta">
-              <button class="extension__btn">dd & Install Extension</button>
+              <button class="extension__btn">Add & Install Extension</button>
             </div>
           </div>
           <div class="extension__card">
@@ -214,9 +216,9 @@
 
         <ul class="faq__list">
           <li class="faq__question">
-            What is Bookmark?
+            
             <button class="faq__btn" aria-expanded="false">
-              <img src="./images/icon-arrow.svg" alt="" />
+              What is Bookmark?<img src="./images/icon-arrow.svg" alt="" />
             </button>
             <span class="faq__answer"
               >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
@@ -225,9 +227,9 @@
             >
           </li>
           <li class="faq__question">
-            How can I request a new browser?
+            
             <button class="faq__btn" aria-expanded="false">
-              <img src="./images/icon-arrow.svg" alt="" />
+              How can I request a new browser?<img src="./images/icon-arrow.svg" alt="" />
             </button>
             <span class="faq__answer"
               >Vivamus luctus eros aliquet convallis ultricies. Mauris augue
@@ -239,9 +241,9 @@
             >
           </li>
           <li class="faq__question">
-            Is there a mobile app?
+            
             <button class="faq__btn" aria-expanded="false">
-              <img src="./images/icon-arrow.svg" alt="" />
+             Is there a mobile app? <img src="./images/icon-arrow.svg" alt="" />
             </button>
             <span class="faq__answer"
               >Sed consectetur quam id neque fermentum accumsan. Praesent luctus
@@ -251,8 +253,8 @@
             >
           </li>
           <li class="faq__question">
-            What about other Chromium browsers?
-            <button class="faq__btn" aria-expanded="false">
+           
+            <button class="faq__btn" aria-expanded="false"> What about other Chromium browsers?
               <img src="./images/icon-arrow.svg" alt="" />
             </button>
             <span class="faq__answer"
@@ -262,32 +264,30 @@
             >
           </li>
         </ul>
-
-        <button class="faq___cta">More Info</button>
+        <div class="faq__button">
+          <button class="faq__cta">More Info</button>
+        </div>
+        
       </section>
       <section class="cta">
-        <h3>35,000+ already joined</h3>
-        <h2>Stay up-to-date with what we’re doing</h2>
+        <h3 class="heading cta--heading">35,000+ already joined</h3>
+        <h2 class="heading cta--heading">Stay up-to-date with what we’re doing</h2>
 
         <form action="#">
-          <label for="email">email</label>
+          <label for="email" class="cta__label">email</label>
           <input
             type="email"
             id="email"
             placeholder="Enter your email address"
+            class="cta__input"
           />
-          <button type="submit">Contact Us</button>
+          <button type="submit" class="cta__btn">Contact Us</button>
         </form>
       </section>
     </main>
-    <!-- 
-  
-  
-   -->
-
-    <footer>
+    <footer class="footer">
       <div class="footer__logo">
-        <img src="./images/logo-bookmark.svg" alt="" />
+        <img src="./images/logo-bookmark-footer.svg" alt="" />
       </div>
       <nav class="footer__nav">
         <ul class="footer__list">
