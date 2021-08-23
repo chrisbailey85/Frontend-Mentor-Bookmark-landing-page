@@ -92,7 +92,7 @@ section {
 }
 .nav {
   background-color: var(--very-dark-blue);
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
@@ -132,6 +132,7 @@ section {
   }
 }
 .nav.open {
+  display: block;
   transform: scale(1, 1);
 }
 
@@ -214,6 +215,7 @@ section {
 
   }
   &__btn {
+    position: relative;
     background-color: transparent;
     color: var(--grayish-blue);
     border: none;
@@ -241,11 +243,18 @@ section {
       width: 90%;
       height: 50%;
       z-index: -1;
+      }  
+      &:nth-child(2)::before {
+        top: 3.5rem;
+      }
+      &:nth-child(3)::before {
+        top: 4rem;
       }
   }
+
   &__img {
     position: relative;
-    width: 90%;
+    width: 80%;
     margin-left: 1rem;
     margin-bottom: 2rem;
   }
@@ -256,6 +265,15 @@ section {
 }
 .features__card__btn {
   display: none;
+}
+.features__btn.is__active::before {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: var(--red);
 }
 
 
@@ -453,3 +471,33 @@ section {
   font-size: 1.5rem;
   margin-right: 1rem;
 }
+
+@media (min-width: 425px) {
+  .heading, section {
+    padding: 0 2rem;
+  }
+
+  .banner::before {
+    width: 80%;
+  }
+  .features__card::before {
+        left: -2rem;
+        } 
+      }
+
+      @media (min-width: 768px) {
+        .heading, section {
+          padding: 0 3rem;
+        }
+      
+        .banner::before {
+          height: 60%;
+        }
+        .features--card--heading {
+          margin: 2rem 0 1rem;
+        }
+        .features__card::before {
+          left: -3rem;
+          height: 68%;
+          } 
+        }
