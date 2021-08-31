@@ -9,7 +9,9 @@
   --grayish-blue: hsl(229, 8%, 60%);
   --very-dark-blue: hsl(229, 31%, 21%);
 }
-a:focus, button:focus, input:focus {
+a:focus,
+button:focus,
+input:focus {
   outline: dotted 3px var(--soft-blue);
 }
 img {
@@ -179,7 +181,7 @@ section {
   text-decoration: none;
   border-radius: 5px;
   padding: 0.8rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .chrome {
@@ -212,7 +214,6 @@ section {
     width: 100%;
     border-top: 1px solid var(--grayish-blue);
     text-align: center;
-
   }
   &__btn {
     position: relative;
@@ -243,13 +244,13 @@ section {
       width: 90%;
       height: 50%;
       z-index: -1;
-      }  
-      &:nth-child(2)::before {
-        top: 3.5rem;
-      }
-      &:nth-child(3)::before {
-        top: 4rem;
-      }
+    }
+    &:nth-child(2)::before {
+      top: 3.5rem;
+    }
+    &:nth-child(3)::before {
+      top: 4rem;
+    }
   }
 
   &__img {
@@ -267,7 +268,7 @@ section {
   display: none;
 }
 .features__btn.is__active::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -1px;
   left: 0;
@@ -275,7 +276,6 @@ section {
   width: 100%;
   background-color: var(--red);
 }
-
 
 .extension {
   text-align: center;
@@ -290,7 +290,7 @@ section {
   &__card {
     width: 250px;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     padding: 3rem 0 2rem;
     margin: 1rem 0;
   }
@@ -319,7 +319,6 @@ section {
       transform: scale(0.9);
     }
   }
-
 }
 
 .faq {
@@ -348,11 +347,10 @@ section {
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    img { 
+    img {
       position: absolute;
       top: 2px;
       right: 0;
-
     }
   }
   &__answer {
@@ -364,7 +362,7 @@ section {
   }
   &__answer.open {
     display: block;
-    transform: scale(1,1);
+    transform: scale(1, 1);
   }
   &__button {
     display: flex;
@@ -398,6 +396,19 @@ section {
   }
   &__label {
     visibility: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    &:focus {
+      clip: auto;
+      height: auto;
+      overflow: auto;
+      position: absolute;
+      width: auto;
+    }
   }
   &__input {
     padding: 0.8rem;
@@ -414,7 +425,9 @@ section {
     padding: 0.8rem 0;
     border-radius: 5px;
     border: none;
-
+    &:focus {
+      outline: #fefefe dotted 3px;
+    }
   }
 }
 .footer {
@@ -473,7 +486,8 @@ section {
 }
 
 @media (min-width: 425px) {
-  .heading, section {
+  .heading,
+  section {
     padding: 0 2rem;
   }
 
@@ -481,23 +495,212 @@ section {
     width: 80%;
   }
   .features__card::before {
-        left: -2rem;
-        } 
-      }
+    left: -2rem;
+  }
+}
 
-      @media (min-width: 768px) {
-        .heading, section {
-          padding: 0 3rem;
-        }
-      
-        .banner::before {
-          height: 60%;
-        }
-        .features--card--heading {
-          margin: 2rem 0 1rem;
-        }
-        .features__card::before {
-          left: -3rem;
-          height: 68%;
-          } 
-        }
+@media (min-width: 768px) {
+  .heading,
+  section {
+    padding: 0 3rem;
+  }
+
+  .banner::before {
+    height: 60%;
+    right: 0;
+  }
+  .banner--paragraph {
+    padding: 0 5rem;
+  }
+  .features__text {
+    margin: auto;
+    max-width: 40ch;
+  }
+  .features--card--heading {
+    margin: 2rem 0 1rem;
+  }
+  .features__card::before {
+    left: -3rem;
+    height: 68%;
+  }
+
+  .extension__cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .faq {
+    width: 80%;
+    margin: 3rem auto;
+  }
+  .cta {
+    padding: 3rem 8rem;
+  }
+  .footer {
+    position: relative;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 3rem;
+    &__logo {
+      height: 25px;
+      margin-right: 1rem;
+    }
+    &__list {
+      display: flex;
+      margin-right: auto;
+    }
+    &__item {
+      margin: 0 1rem;
+    }
+    &__social {
+      margin-left: auto;
+    }
+  }
+  .attribution {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (min-width: 1024px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 6rem 0;
+  }
+  .hambuger {
+    display: none;
+  }
+  .nav {
+    all: unset;
+    &__list {
+      display: flex;
+      align-items: center;
+      margin-top: 0;
+    }
+    &__item {
+      border: none;
+      padding: 0;
+      margin: 0 1rem;
+    }
+    &__link {
+      color: var(--very-dark-blue);
+      font-size: 1rem;
+    }
+    .social {
+      display: none;
+    }
+    .login {
+      margin-top: 0;
+      background-color: var(--red);
+      color: #fefefe;
+      padding: 0.5rem 2rem;
+      border-radius: 5px;
+    }
+  }
+
+  .banner {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    &__img {
+      width: 50%;
+    }
+    &::before {
+      width: 40%;
+      height: 90%;
+    }
+    &__text {
+      margin-top: 0;
+      text-align: left;
+    }
+    &--paragraph {
+      padding-left: 3rem;
+    }
+    &__links {
+      padding-left: 3rem;
+      text-align: left;
+    }
+  }
+  .features {
+    margin-top: 5rem;
+    &__buttons {
+      width: 70%;
+      margin: 2rem auto;
+    }
+    &__list {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__item {
+      border-top: none;
+      width: initial;
+    }
+    &__content {
+      width: 50ch;
+      margin-left: 10%;
+    }
+    &__card {
+      display: flex;
+      text-align: left;
+      justify-content: space-between;
+      align-items: center;
+      &__btn {
+        display: block;
+        background-color: var(--soft-blue);
+        color: #fefefe;
+        border: none;
+        border-radius: 5px;
+        padding: 0.5rem 0.9rem;
+        font-weight: 500;
+        cursor: pointer;
+      }
+      &::before {
+        width: 50%;
+        height: 95%;
+      }
+    }
+    &__img {
+      width: 50%;
+    }
+    &--card--heading {
+      margin: 1rem 0;
+      padding: 0;
+      font-size: 2rem;
+    }
+  }
+  .extension--paragraph {
+    text-align: center;
+    max-width: 50ch;
+    margin: 0 auto 1rem;
+  }
+  .extension__card {
+    margin-left: 2rem;
+    &:nth-child(2) {
+      transform: translateY(1rem);
+    }
+    &:nth-child(3) {
+      transform: translateY(2rem);
+    }
+  }
+  .faq {
+    width: 60%;
+  }
+  .cta--heading {
+    padding: 0 16rem;
+  }
+  .cta form {
+    width: 50%;
+    margin: auto;
+  }
+  .footer {
+    padding: 3rem 6rem;
+  }
+}

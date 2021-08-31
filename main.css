@@ -11,7 +11,9 @@
   --very-dark-blue: hsl(229, 31%, 21%);
 }
 
-a:focus, button:focus, input:focus {
+a:focus,
+button:focus,
+input:focus {
   outline: dotted 3px var(--soft-blue);
 }
 
@@ -406,6 +408,19 @@ section {
 }
 .cta__label {
   visibility: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.cta__label:focus {
+  clip: auto;
+  height: auto;
+  overflow: auto;
+  position: absolute;
+  width: auto;
 }
 .cta__input {
   padding: 0.8rem;
@@ -421,6 +436,9 @@ section {
   padding: 0.8rem 0;
   border-radius: 5px;
   border: none;
+}
+.cta__btn:focus {
+  outline: #fefefe dotted 3px;
 }
 
 .footer {
@@ -481,7 +499,8 @@ section {
 }
 
 @media (min-width: 425px) {
-  .heading, section {
+  .heading,
+section {
     padding: 0 2rem;
   }
 
@@ -494,12 +513,23 @@ section {
   }
 }
 @media (min-width: 768px) {
-  .heading, section {
+  .heading,
+section {
     padding: 0 3rem;
   }
 
   .banner::before {
     height: 60%;
+    right: 0;
+  }
+
+  .banner--paragraph {
+    padding: 0 5rem;
+  }
+
+  .features__text {
+    margin: auto;
+    max-width: 40ch;
   }
 
   .features--card--heading {
@@ -509,6 +539,199 @@ section {
   .features__card::before {
     left: -3rem;
     height: 68%;
+  }
+
+  .extension__cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .faq {
+    width: 80%;
+    margin: 3rem auto;
+  }
+
+  .cta {
+    padding: 3rem 8rem;
+  }
+
+  .footer {
+    position: relative;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 3rem;
+  }
+  .footer__logo {
+    height: 25px;
+    margin-right: 1rem;
+  }
+  .footer__list {
+    display: flex;
+    margin-right: auto;
+  }
+  .footer__item {
+    margin: 0 1rem;
+  }
+  .footer__social {
+    margin-left: auto;
+  }
+
+  .attribution {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (min-width: 1024px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 6rem 0;
+  }
+
+  .hambuger {
+    display: none;
+  }
+
+  .nav {
+    all: unset;
+  }
+  .nav__list {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+  }
+  .nav__item {
+    border: none;
+    padding: 0;
+    margin: 0 1rem;
+  }
+  .nav__link {
+    color: var(--very-dark-blue);
+    font-size: 1rem;
+  }
+  .nav .social {
+    display: none;
+  }
+  .nav .login {
+    margin-top: 0;
+    background-color: var(--red);
+    color: #fefefe;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+  }
+
+  .banner {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .banner__img {
+    width: 50%;
+  }
+  .banner::before {
+    width: 40%;
+    height: 90%;
+  }
+  .banner__text {
+    margin-top: 0;
+    text-align: left;
+  }
+  .banner--paragraph {
+    padding-left: 3rem;
+  }
+  .banner__links {
+    padding-left: 3rem;
+    text-align: left;
+  }
+
+  .features {
+    margin-top: 5rem;
+  }
+  .features__buttons {
+    width: 70%;
+    margin: 2rem auto;
+  }
+  .features__list {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .features__item {
+    border-top: none;
+    width: initial;
+  }
+  .features__content {
+    width: 50ch;
+    margin-left: 10%;
+  }
+  .features__card {
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .features__card__btn {
+    display: block;
+    background-color: var(--soft-blue);
+    color: #fefefe;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .features__card::before {
+    width: 50%;
+    height: 95%;
+  }
+  .features__img {
+    width: 50%;
+  }
+  .features--card--heading {
+    margin: 1rem 0;
+    padding: 0;
+    font-size: 2rem;
+  }
+
+  .extension--paragraph {
+    text-align: center;
+    max-width: 50ch;
+    margin: 0 auto 1rem;
+  }
+
+  .extension__card {
+    margin-left: 2rem;
+  }
+  .extension__card:nth-child(2) {
+    transform: translateY(1rem);
+  }
+  .extension__card:nth-child(3) {
+    transform: translateY(2rem);
+  }
+
+  .faq {
+    width: 60%;
+  }
+
+  .cta--heading {
+    padding: 0 16rem;
+  }
+
+  .cta form {
+    width: 50%;
+    margin: auto;
+  }
+
+  .footer {
+    padding: 3rem 6rem;
   }
 }
 
