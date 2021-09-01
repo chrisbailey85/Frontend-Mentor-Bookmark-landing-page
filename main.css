@@ -170,11 +170,14 @@ body.open .logo {
   position: relative;
   text-align: center;
 }
+.banner__img {
+  margin-right: 1rem;
+}
 .banner::before {
   background-color: var(--soft-blue);
   border-bottom-left-radius: 70px;
   position: absolute;
-  right: -1rem;
+  right: 0;
   top: 2rem;
   content: "";
   width: 90%;

@@ -165,11 +165,14 @@ body.open {
 .banner {
   position: relative;
   text-align: center;
+  &__img {
+    margin-right: 1rem;
+  }
   &::before {
     background-color: var(--soft-blue);
     border-bottom-left-radius: 70px;
     position: absolute;
-    right: -1rem;
+    right: 0;
     top: 2rem;
     content: "";
     width: 90%;
