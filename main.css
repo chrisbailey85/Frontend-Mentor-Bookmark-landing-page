@@ -26,6 +26,7 @@ body {
   font-family: "Rubik", sans-serif;
   line-height: 1.5;
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 .header {
@@ -46,36 +47,6 @@ section {
   border: none;
   background-color: transparent;
   z-index: 10000;
-}
-
-.hambuger.open .line {
-  background-color: #fefefe;
-}
-.hambuger.open .line--one {
-  position: absolute;
-  top: 10px;
-  left: 0;
-  transform: rotate(45deg);
-}
-.hambuger.open .line--two {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  opacity: 0;
-}
-.hambuger.open .line--three {
-  position: absolute;
-  top: 10px;
-  left: 0;
-  transform: rotate(-45deg);
-}
-
-.logo.open {
-  position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
-  z-index: 1000;
 }
 
 .line {
@@ -112,7 +83,7 @@ section {
   top: 0;
   left: 0;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   z-index: 10;
   transform: scale(1, 0);
   transform-origin: top;
@@ -140,10 +111,46 @@ section {
   padding: 0.5rem 0;
   margin-top: 1rem;
 }
+.nav .social {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
 
-.nav.open {
+body.open {
+  overflow: hidden;
+}
+body.open .nav {
   display: block;
   transform: scale(1, 1);
+}
+body.open .hambuger .line {
+  background-color: #fefefe;
+}
+body.open .hambuger .line--one {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  transform: rotate(45deg);
+}
+body.open .hambuger .line--two {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  opacity: 0;
+}
+body.open .hambuger .line--three {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  transform: rotate(-45deg);
+}
+body.open .logo {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: 1000;
 }
 
 .heading {

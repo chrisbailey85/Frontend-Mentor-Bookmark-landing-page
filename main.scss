@@ -22,6 +22,7 @@ body {
   font-family: "Rubik", sans-serif;
   line-height: 1.5;
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 .header {
@@ -40,36 +41,6 @@ section {
   border: none;
   background-color: transparent;
   z-index: 10000;
-}
-.hambuger.open {
-  .line {
-    background-color: #fefefe;
-    &--one {
-      position: absolute;
-      top: 10px;
-      left: 0;
-      transform: rotate(45deg);
-    }
-    &--two {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      opacity: 0;
-    }
-    &--three {
-      position: absolute;
-      top: 10px;
-      left: 0;
-      transform: rotate(-45deg);
-    }
-  }
-}
-.logo.open {
-  position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
-  z-index: 1000;
 }
 .line {
   height: 2.5px;
@@ -104,7 +75,7 @@ section {
   top: 0;
   left: 0;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   z-index: 10;
   transform: scale(1, 0);
   transform-origin: top;
@@ -132,12 +103,51 @@ section {
     padding: 0.5rem 0;
     margin-top: 1rem;
   }
-}
-.nav.open {
-  display: block;
-  transform: scale(1, 1);
+
+  .social {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+  }
 }
 
+body.open {
+  overflow: hidden;
+  .nav {
+    display: block;
+    transform: scale(1, 1);
+  }
+  .hambuger {
+    .line {
+      background-color: #fefefe;
+      &--one {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        transform: rotate(45deg);
+      }
+      &--two {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        opacity: 0;
+      }
+      &--three {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  .logo {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    z-index: 1000;
+  }
+}
 .heading {
   color: var(--very-dark-blue);
   margin: 1rem 0;
