@@ -744,5 +744,111 @@ section {
     padding: 3rem 6rem;
   }
 }
+@media (min-width: 1440px) {
+  .header {
+    padding: 3rem 9rem;
+  }
+
+  .nav .login {
+    margin-top: 0;
+    background-color: var(--red);
+    color: #fefefe;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+  }
+
+  .paragraph {
+    font-size: 1.1rem;
+  }
+
+  .banner__text {
+    margin-top: 0;
+    text-align: left;
+    padding: 0 3rem;
+  }
+  .banner--heading {
+    font-size: 2rem;
+  }
+  .banner--paragraph {
+    padding-left: 3rem;
+    max-width: 60ch;
+  }
+  .banner__links {
+    padding-left: 6rem;
+    text-align: left;
+    margin-top: 2rem;
+  }
+
+  .features {
+    margin-top: 5rem;
+  }
+  .features--heading {
+    font-size: 2rem;
+  }
+  .features__buttons {
+    width: 50%;
+  }
+  .features__content {
+    width: 60ch;
+  }
+  .features__card::before {
+    width: 48%;
+    height: 95%;
+  }
+  .features--card--heading {
+    margin: 1rem 0;
+    padding: 0;
+    font-size: 2rem;
+  }
+  .features--card--paragraph {
+    max-width: 40ch;
+  }
+  .features__card__btn {
+    font-size: 1rem;
+  }
+  .features__img {
+    margin-left: 5rem;
+  }
+
+  .extension--paragraph {
+    text-align: center;
+    max-width: 50ch;
+    margin: 0 auto 1rem;
+  }
+
+  .extension--heading {
+    font-size: 2rem;
+  }
+
+  .faq {
+    width: 50%;
+  }
+
+  .cta--heading:nth-child(2) {
+    text-align: center;
+    padding: 0 26rem;
+  }
+
+  .cta form {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 40%;
+    margin: auto;
+  }
+
+  .cta__btn {
+    width: 40%;
+    margin-left: 1rem;
+  }
+
+  .cta__input {
+    margin-bottom: 0;
+    width: 60%;
+  }
+
+  .footer {
+    padding: 3rem 9rem;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
