@@ -29,7 +29,7 @@
   </head>
   <body class="">
     <header class="header">
-      <img src="./images/logo-bookmark.svg" alt="" class="logo" />
+      <div class="logo"></div>
       <button
         class="hambuger"
         aria-expanded="false"
@@ -100,14 +100,14 @@
 
         <div class="features__buttons">
           <ul class="features__list">
-            <li class="features__item"><button class="features__btn is__active">Simple Bookmarking</button></li>
-            <li class="features__item"> <button class="features__btn">Speedy Searching</button></li>
-            <li class="features__item"><button class="features__btn">Easy Sharing</button></li>
+            <li class="features__item"><button class="features__btn is__active" aria-expanded="true" aria-controls="panel-one">Simple Bookmarking</button></li>
+            <li class="features__item"> <button class="features__btn" aria-expanded="false" aria-controls="panel-two">Speedy Searching</button></li>
+            <li class="features__item"><button class="features__btn" aria-expanded="false" aria-controls="panel-three">Easy Sharing</button></li>
           </ul>
         </div>
 
         <div class="features__cards">
-          <div class="features__card ">
+          <div class="features__card" id="tab-one">
             <img
               src="./images/illustration-features-tab-1.svg"
               alt=""
@@ -126,7 +126,7 @@
               <button class="features__card__btn">More Info</button>
             </div>
             </div>
-          <div class="features__card hidden">
+          <div class="features__card hidden" id="panel-two">
             <img
               src="./images/illustration-features-tab-2.svg"
               alt=""
@@ -142,7 +142,7 @@
           </div>
             </div>
            
-          <div class="features__card hidden">
+          <div class="features__card hidden" id="panel-three">
             <img
               src="./images/illustration-features-tab-3.svg"
               alt=""
@@ -282,7 +282,7 @@
         <h3 class="heading cta--heading">35,000+ already joined</h3>
         <h2 class="heading cta--heading">Stay up-to-date with what we’re doing</h2>
 
-        <form action="#">
+        <form action="#" class="">
           <label for="email" class="cta__label">email</label>
           <input
             type="email"
@@ -290,6 +290,7 @@
             placeholder="Enter your email address"
             class="cta__input"
           />
+          <p class="invaild__message">Whoops, make sure it's an email</p>
           <button type="submit" class="cta__btn">Contact Us</button>
         </form>
       </section>
@@ -328,5 +329,7 @@
         >. Coded by <a href="#">Your Name Here</a>.
       </p>
     </footer>
+
+    <script src="./main.js"></script>
   </body>
 </html>
