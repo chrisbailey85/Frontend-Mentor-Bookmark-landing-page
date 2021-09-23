@@ -256,7 +256,7 @@ body.open {
   }
   &__cards {
     position: relative;
-    margin-bottom: 600px;
+    margin-bottom: 35rem;
   }
   &__card {
     position: absolute;
@@ -383,10 +383,27 @@ body.open {
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 1rem;
+    cursor: pointer;
     img {
       position: absolute;
       top: 2px;
       right: 0;
+      z-index: -1;
+    }
+
+    &::before {
+      content: "";
+      background-image: url("./images/icon-arrow.svg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 12px;
+      width: 18px;
+      position: absolute;
+      top: 2px;
+      right: 0;
+      z-index: -1;
+      transition: transform 0.3s ease-in-out;
     }
   }
   &__answer {
@@ -410,9 +427,14 @@ body.open {
     cursor: pointer;
   }
 }
-.faq__btn.open + .faq__answer{
+.faq__btn.open + .faq__answer {
   display: block;
-  transform: scale(1,1);
+  transform: scale(1, 1);
+}
+
+.faq__btn.open::before {
+  background-image: url("./images/icon-arrow-open.svg");
+  transform: rotate(180deg);
 }
 .cta {
   background-color: var(--soft-blue);
@@ -472,34 +494,34 @@ body.open {
 }
 .invaild {
   .cta__input {
-   border: 2px solid var(--red);
+    border: 2px solid var(--red);
   }
-&::before {
-  content: '';
-  background-image: url("./images/icon-error.svg");
-  background-size: cover;
-  height: 1.5rem;
-  width: 1.5rem;
-  position: absolute;
-  top: 1.5rem;
-  right: 3rem;
-}
-&__message {
- display: none;
-}
-&__message.error {
-  display: block;
-  color: #fefefe;
-  background-color: var(--red);
-  padding: 0.2rem 0;
-  width: 279px ;
-  position: absolute;
-  top: 3.6rem;
-  left: 2rem;
-  font-size: 0.6rem;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
+  &::before {
+    content: "";
+    background-image: url("./images/icon-error.svg");
+    background-size: cover;
+    height: 1.5rem;
+    width: 1.5rem;
+    position: absolute;
+    top: 1.5rem;
+    right: 3rem;
+  }
+  &__message {
+    display: none;
+  }
+  &__message.error {
+    display: block;
+    color: #fefefe;
+    background-color: var(--red);
+    padding: 0.2rem 0;
+    width: 279px;
+    position: absolute;
+    top: 3.6rem;
+    left: 2rem;
+    font-size: 0.6rem;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
 }
 .footer {
   background-color: var(--very-dark-blue);
@@ -591,6 +613,15 @@ body.open {
   .features__text {
     margin: auto;
     max-width: 40ch;
+  }
+  .features__cards {
+    margin-bottom: 50rem;
+  }
+  #panel-two .features__img {
+    margin-left: 10.5rem;
+  }
+  #panel-three .features__img {
+    margin-left: 10rem;
   }
   .features--card--heading {
     margin: 2rem 0 1rem;
@@ -694,6 +725,7 @@ body.open {
       width: 40%;
       height: 90%;
     }
+
     &__text {
       margin-top: 0;
       text-align: left;
@@ -708,6 +740,9 @@ body.open {
   }
   .features {
     margin-top: 5rem;
+    &__cards {
+      margin-bottom: 30rem;
+    }
     &__buttons {
       width: 70%;
       margin: 2rem auto;
@@ -742,12 +777,12 @@ body.open {
         cursor: pointer;
       }
       &::before {
-        width: 50%;
+        width: 40%;
         height: 95%;
       }
     }
     &__img {
-      width: 50%;
+      width: 40%;
     }
     &--card--heading {
       margin: 1rem 0;
@@ -799,9 +834,9 @@ body.open {
       border-radius: 5px;
     }
   }
-.paragraph {
-  font-size: 1.1rem;
-}
+  .paragraph {
+    font-size: 1.1rem;
+  }
   .banner {
     &__text {
       margin-top: 0;
@@ -834,7 +869,7 @@ body.open {
     }
     &__card {
       &::before {
-        width: 48%;
+        width: 45%;
         height: 95%;
       }
     }
@@ -848,7 +883,7 @@ body.open {
     }
     &__card__btn {
       font-size: 1rem;
-    } 
+    }
     &__img {
       margin-left: 5rem;
     }
@@ -883,7 +918,7 @@ body.open {
     width: 60%;
   }
   .invaild::before {
-    content: '';
+    content: "";
     background-image: url("./images/icon-error.svg");
     background-size: cover;
     height: 1.5rem;
@@ -898,7 +933,8 @@ body.open {
 }
 
 @media (pointer: fine) {
-  .cta__btn, .login {
+  .cta__btn,
+  .login {
     cursor: pointer;
     &:hover {
       background-color: #fefefe;
@@ -907,7 +943,9 @@ body.open {
     }
   }
 
-  .nav__link:hover,.footer__link:hover, .social__icon:hover {
+  .nav__link:hover,
+  .footer__link:hover,
+  .social__icon:hover {
     color: var(--red);
   }
 
@@ -919,12 +957,12 @@ body.open {
     color: var(--very-dark-blue);
     background: transparent;
     border-color: var(--very-dark-blue);
- }
- .features__btn:hover {
-   color: var(--red);
- }
- .extension__btn:hover {
-   color: var(--soft-blue);
-   background: transparent;
- }
+  }
+  .features__btn:hover {
+    color: var(--red);
+  }
+  .extension__btn:hover {
+    color: var(--soft-blue);
+    background: transparent;
+  }
 }

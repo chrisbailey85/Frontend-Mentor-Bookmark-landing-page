@@ -262,7 +262,7 @@ body.open .logo {
 }
 .features__cards {
   position: relative;
-  margin-bottom: 600px;
+  margin-bottom: 35rem;
 }
 .features__card {
   position: absolute;
@@ -392,11 +392,27 @@ body.open .logo {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 .faq__btn img {
   position: absolute;
   top: 2px;
   right: 0;
+  z-index: -1;
+}
+.faq__btn::before {
+  content: "";
+  background-image: url("./images/icon-arrow.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 12px;
+  width: 18px;
+  position: absolute;
+  top: 2px;
+  right: 0;
+  z-index: -1;
+  transition: transform 0.3s ease-in-out;
 }
 .faq__answer {
   display: none;
@@ -422,6 +438,11 @@ body.open .logo {
 .faq__btn.open + .faq__answer {
   display: block;
   transform: scale(1, 1);
+}
+
+.faq__btn.open::before {
+  background-image: url("./images/icon-arrow-open.svg");
+  transform: rotate(180deg);
 }
 
 .cta {
@@ -606,6 +627,18 @@ section {
     max-width: 40ch;
   }
 
+  .features__cards {
+    margin-bottom: 50rem;
+  }
+
+  #panel-two .features__img {
+    margin-left: 10.5rem;
+  }
+
+  #panel-three .features__img {
+    margin-left: 10rem;
+  }
+
   .features--card--heading {
     margin: 2rem 0 1rem;
   }
@@ -732,6 +765,9 @@ section {
   .features {
     margin-top: 5rem;
   }
+  .features__cards {
+    margin-bottom: 30rem;
+  }
   .features__buttons {
     width: 70%;
     margin: 2rem auto;
@@ -767,11 +803,11 @@ section {
     cursor: pointer;
   }
   .features__card::before {
-    width: 50%;
+    width: 40%;
     height: 95%;
   }
   .features__img {
-    width: 50%;
+    width: 40%;
   }
   .features--card--heading {
     margin: 1rem 0;
@@ -864,7 +900,7 @@ section {
     width: 60ch;
   }
   .features__card::before {
-    width: 48%;
+    width: 45%;
     height: 95%;
   }
   .features--card--heading {
@@ -934,16 +970,20 @@ section {
   }
 }
 @media (pointer: fine) {
-  .cta__btn, .login {
+  .cta__btn,
+.login {
     cursor: pointer;
   }
-  .cta__btn:hover, .login:hover {
+  .cta__btn:hover,
+.login:hover {
     background-color: #fefefe;
     color: var(--red);
     border: 1px solid var(--red);
   }
 
-  .nav__link:hover, .footer__link:hover, .social__icon:hover {
+  .nav__link:hover,
+.footer__link:hover,
+.social__icon:hover {
     color: var(--red);
   }
 
