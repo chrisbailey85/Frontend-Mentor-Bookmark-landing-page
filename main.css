@@ -516,13 +516,13 @@ body.open .logo {
 }
 .invaild__message {
   display: none;
+  width: 279px;
 }
 .invaild__message.error {
   display: block;
   color: #fefefe;
   background-color: var(--red);
   padding: 0.2rem 0;
-  width: 279px;
   position: absolute;
   top: 3.6rem;
   left: 2rem;
@@ -963,6 +963,10 @@ section {
     position: absolute;
     top: 1.5rem;
     left: 50%;
+  }
+
+  .invaild__message {
+    width: 237px;
   }
 
   .footer {

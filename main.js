@@ -29,9 +29,15 @@ featuresBtn.forEach((btn, idx) => {
 
 faqBtn.forEach((btn) => {
   btn.addEventListener("click", (e) => {
-    closeBtn(faqBtn, "open");
-    e.target.classList.add("open");
+    if(e.target.classList.contains('open')) {
+      closeBtn(faqBtn, "open");
+    } else {
+      closeBtn(faqBtn, "open");
+      e.target.classList.add("open");
     e.target.ariaExpanded = true;
+    }
+    
+    
   });
 });
 
