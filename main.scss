@@ -485,7 +485,7 @@ body.open {
     width: 100%;
     padding: 0.8rem 0;
     border-radius: 5px;
-    border: none;
+    border: 1px solid transparent;
     transition: all 0.3s ease-in-out;
     &:focus {
       outline: #fefefe dotted 3px;
